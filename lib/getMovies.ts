@@ -60,3 +60,12 @@ export const getTopRatedMovies = async (): Promise<any> => {
 
   return data?.results;
 }
+
+export const searchedMovies = async (term: string): Promise<any> => {
+  const url = new URL(`${process.env.NEXT_PUBLIC_TMDB_API_URL}/search/movie`)
+  url.searchParams.set("query", term);
+  
+  const data = await fetchFromTMDB(url);
+
+  return data?.results;
+}
