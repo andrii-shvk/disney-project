@@ -8,7 +8,7 @@ type Props = {
 
 const MovieCard = ({ movie }: Props) => {
   return (
-    <div className="relative inset-0 transform cursor-pointer transition duration-200 ease-out hover:scale-105 hover:drop-shadow-lg">
+    <div className="relative flex-shrink-0 inset-0 transform cursor-pointer transition duration-200 ease-out hover:scale-105 hover:drop-shadow-lg">
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-gray-200/0 via-gray-900/10 to-gray-300 dark:to-bgDark" />
 
       <Image

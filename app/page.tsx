@@ -2,6 +2,7 @@
 
 import CarouselBannerWrapper from "@/components/CarouselBannerWrapper";
 import MovieCarousel from "@/components/MovieCarousel";
+import { EmblaOptionsType } from "embla-carousel";
 import {
   getPopularMovies,
   getTopRatedMovies,
@@ -14,6 +15,7 @@ export default function Home() {
   const [upcomingMovies, setUpComingMovies] = useState<Movie[]>([]);
   const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
   const [topRatedMovies, setTopRatedMovies] = useState<Movie[]>([]);
+  const OPTIONS: EmblaOptionsType = {};
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,11 +34,23 @@ export default function Home() {
   return (
     <main>
       <CarouselBannerWrapper />
-      
-      <div className="flex flex-col space-y-2 lg:-mt-48">
-        <MovieCarousel title="Upcoming" movies={upcomingMovies} />
-        <MovieCarousel title="Top rated" movies={popularMovies} />
-        <MovieCarousel title="Popular" movies={topRatedMovies} />
+
+      <div className="flex flex-col space-y-2 max-md:-mt-32 md:-mt-40 lg:-mt-48">
+        <MovieCarousel
+          title="Upcoming"
+          movies={upcomingMovies}
+          options={OPTIONS}
+        />
+        <MovieCarousel
+          title="Top rated"
+          movies={popularMovies}
+          options={OPTIONS}
+        />
+        <MovieCarousel
+          title="Popular"
+          movies={topRatedMovies}
+          options={OPTIONS}
+        />
       </div>
     </main>
   );
