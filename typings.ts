@@ -25,7 +25,6 @@ export type SearchResults = {
 export type Genre = {
     id: number;
     name: string;
-    // Define properties based on the structure of the movie object from the API response
 }
 
 export type Genres = {

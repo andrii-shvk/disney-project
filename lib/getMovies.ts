@@ -41,7 +41,7 @@ export const getDiscoverMovies = async (
   const url = new URL(`${process.env.NEXT_PUBLIC_TMDB_API_URL}/discover/movie`);
 
   keywords && url.searchParams.set("with_keywords", keywords);
-  id && url.searchParams.set("with_id", id);
+  id && url.searchParams.set("with_genres", id);
 
   const data = await fetchFromTMDB(url);
   return data?.results;
@@ -65,6 +65,13 @@ export const searchedMovies = async (term: string): Promise<any> => {
   const url = new URL(`${process.env.NEXT_PUBLIC_TMDB_API_URL}/search/movie`)
   url.searchParams.set("query", term);
   
+  const data = await fetchFromTMDB(url);
+
+  return data?.results;
+}
+
+export const getGenreMovies = async (): Promise<any> => {
+  const url = new URL(`${process.env.NEXT_PUBLIC_TMDB_API_URL}/genre/movie/list`)
   const data = await fetchFromTMDB(url);
 
   return data?.results;
