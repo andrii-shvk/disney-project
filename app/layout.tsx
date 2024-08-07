@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Disney+ Project",

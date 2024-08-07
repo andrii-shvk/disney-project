@@ -1,3 +1,5 @@
+"use client"
+
 import { Movie } from "@/typings";
 import MovieCard from "./MovieCard";
 import useEmblaCarousel from "embla-carousel-react";
