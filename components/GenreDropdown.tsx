@@ -43,7 +43,7 @@ const GenreDropdown = () => {
         Genre
         <ChevronDown />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="z-50">
+      <DropdownMenuContent>
         <DropdownMenuLabel>Select a Genre</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {genreMovies?.genres.map((genre) => (

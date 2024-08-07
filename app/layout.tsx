@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Suspense } from "react";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Disney+ Project",
@@ -25,6 +26,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

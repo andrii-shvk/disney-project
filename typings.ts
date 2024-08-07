@@ -30,3 +30,8 @@ export type Genre = {
 export type Genres = {
     genres: Genre[]; // Assuming the API returns an array of movies under 'results'
 }
+
+export type FooterList = {
+    title: string;
+    link: string;
+}
